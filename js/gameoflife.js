@@ -78,9 +78,9 @@ const calculateNext = (state) => {
 const iterate = (state, iterations) => {
   const iterate =[state];
   for (let i =0; i < iterations; i++) {
-    states.push(calculateNext(states[states.length - 1]));
+    state.push(calculateNext(state[state.length - 1]));
   }
-  return states;
+  return state;
 };
 
 const main = (pattern, iterations) => {
