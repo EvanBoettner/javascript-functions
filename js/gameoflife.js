@@ -75,12 +75,12 @@ const calculateNext = (state) => {
   return result;
 };
 
-const iterate = (state, iterations) => {
-  const iterate =[state];
+const iterate = (states, iterations) => {
+  const iterate =[states];
   for (let i =0; i < iterations; i++) {
-    state.push(calculateNext(state[state.length - 1]));
+    states.push(calculateNext(states[states.length - 1]));
   }
-  return state;
+  return states;
 };
 
 const main = (pattern, iterations) => {
